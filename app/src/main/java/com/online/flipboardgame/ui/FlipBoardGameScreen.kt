@@ -23,8 +23,6 @@ fun FlipBoardGameScreen(viewModel: FlipBoardViewModel = hiltViewModel()) {
     when (val currentState = gameState) {
         is GameState.Idle -> Text("Game is idle")
         is GameState.Running -> {
-            val grid = (gameState as GameState.Running).grid
-            val largestRectangle = (gameState as GameState.Running).largestRectangleArea
 
             Column(
                 modifier = Modifier.fillMaxSize(),
