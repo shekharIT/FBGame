@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-class LargestRectangleUseCase @Inject constructor() {
+open class LargestRectangleUseCase @Inject constructor() {
 
     fun calculateLargestRectangle(grid: List<List<Boolean>>): Flow<Rectangle?> = flow {
         val rows = grid.size

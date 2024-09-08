@@ -12,12 +12,12 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class FlipBoardViewModel @Inject constructor(
+open class FlipBoardViewModel @Inject constructor(
     private val largestRectangleUseCase: LargestRectangleUseCase
 ) : ViewModel() {
 
     private val _gameState = MutableStateFlow<GameState>(GameState.Idle)
-    val gameState: StateFlow<GameState> = _gameState.asStateFlow()
+    open val gameState: StateFlow<GameState> = _gameState.asStateFlow()
 
     private var grid = List(15) { List(15) { false } }
 
@@ -25,7 +25,7 @@ class FlipBoardViewModel @Inject constructor(
         updateGameState()
     }
 
-    fun toggleCell(row: Int, col: Int) {
+    open fun toggleCell(row: Int, col: Int) {
         grid = grid.mapIndexed { r, rows ->
             rows.mapIndexed { c, cell ->
                 if (r == row && c == col) !cell else cell

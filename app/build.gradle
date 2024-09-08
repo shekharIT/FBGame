@@ -20,6 +20,15 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
+
+    // Add this block if you use Hilt for testing
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -50,6 +59,8 @@ android {
     packagingOptions {
         resources {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
+            excludes += '/META-INF/LICENSE.md'
+            excludes += '/META-INF/LICENSE-notice.md'
         }
     }
 }
@@ -61,11 +72,28 @@ dependencies {
     implementation libs.material
     implementation libs.androidx.activity
     implementation libs.androidx.constraintlayout
+    implementation libs.androidx.junit.ktx
+    implementation libs.androidx.ui.test.junit4.android
 
     // For testing
-    testImplementation libs.junit
+    androidTestImplementation libs.junit
+    androidTestImplementation libs.hilt.android.testing
     androidTestImplementation libs.androidx.junit
-    androidTestImplementation libs.androidx.espresso.core
+    androidTestImplementation libs.androidx.ui.test.junit4
+    androidTestImplementation libs.androidx.ui.test.manifest
+    androidTestImplementation libs.androidx.runner
+
+    androidTestImplementation libs.androidx.orchestrator
+    androidTestUtil libs.androidx.orchestrator
+
+    //Mockito
+    androidTestImplementation libs.mockk
+
+    // Turbine for Flow testing
+    androidTestImplementation libs.turbine
+
+    // Kotlin Coroutines Test
+    androidTestImplementation libs.kotlinx.coroutines.test
 
     // Jetpack Compose
     implementation libs.androidx.ui
@@ -81,20 +109,10 @@ dependencies {
     implementation libs.hilt.android
     kapt libs.hilt.compiler
     implementation libs.androidx.hilt.navigation.compose
+    androidTestImplementation libs.hilt.android.testing
+    kaptAndroidTest libs.hilt.compiler.v244
 
     // Kotlin Coroutines
     implementation libs.kotlinx.coroutines.core
     implementation libs.kotlinx.coroutines.android
 }
-/*
-
-buildscript {
-    ext {
-        compose_version = '1.5.0'
-    }
-
-    dependencies {
-        classpath libs.kotlin.gradle.plugin  // Match your Kotlin version
-        classpath libs.androidx.compiler.v150 // Make sure this is added
-    }
-}*/
