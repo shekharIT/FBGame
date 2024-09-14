@@ -11,10 +11,10 @@
       <SelectionState runConfigName="FlipBoardViewModelTest">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="FlipBoardGameScreenTest">
+      <SelectionState runConfigName="FlipBoardViewModelAndroidTest">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="FlipBoardViewModelAndroidTest">
+      <SelectionState runConfigName="MainActivityTest">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

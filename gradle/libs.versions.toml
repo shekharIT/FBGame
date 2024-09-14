@@ -2,8 +2,8 @@
 agp = "8.6.0"
 compiler = "1.5.15"
 core = "1.6.1"
-hiltAndroidTesting = "2.44"
-hiltCompiler = "2.44"
+hiltAndroidTesting = "2.48"
+hiltCompiler = "2.48"
 hiltNavigationCompose = "1.2.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
@@ -40,8 +40,8 @@ androidx-ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
 androidx-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "ui" }
 androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "ui" }
 androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "ui" }
-hilt-android-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hiltAndroidTesting" }
-hilt-compiler-v244 = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltCompiler" }
+
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidTesting" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -52,6 +52,7 @@ kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-t
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+hilt-android-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hiltAndroidTesting" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroid" }
 androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }

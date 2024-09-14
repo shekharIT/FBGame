@@ -2,7 +2,7 @@ package com.online.flipboardgame.usecase
 
 import app.cash.turbine.test
 import com.online.flipboardgame.model.Rectangle
-import com.online.flipboardgame.usecase.LargestRectangleUseCase
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Assert.assertEquals
 import org.junit.Before

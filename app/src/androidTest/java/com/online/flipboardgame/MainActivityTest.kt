@@ -9,7 +9,6 @@ import org.junit.Rule
 import org.junit.Test
 import dagger.hilt.android.testing.HiltAndroidTest
 
-@OptIn(ExperimentalTestApi::class)
 @HiltAndroidTest
 class MainActivityTest {
 

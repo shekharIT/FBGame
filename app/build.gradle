@@ -17,7 +17,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.online.flipboardgame.FlipBoardGameApplicationtTest"
     }
 
     testOptions {
@@ -75,44 +75,41 @@ dependencies {
     implementation libs.androidx.junit.ktx
     implementation libs.androidx.ui.test.junit4.android
 
-    // For testing
+    /*For testing*/
     androidTestImplementation libs.junit
-    androidTestImplementation libs.hilt.android.testing
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.ui.test.junit4
     androidTestImplementation libs.androidx.ui.test.manifest
     androidTestImplementation libs.androidx.runner
 
+    /*Hilt Testing*/
+    androidTestImplementation libs.hilt.android.testing
+
     androidTestImplementation libs.androidx.orchestrator
     androidTestUtil libs.androidx.orchestrator
 
-    //Mockito
-    androidTestImplementation libs.mockk
-
-    // Turbine for Flow testing
+    /*Turbine for Flow testing*/
     androidTestImplementation libs.turbine
 
-    // Kotlin Coroutines Test
+    /*Kotlin Coroutines Test*/
     androidTestImplementation libs.kotlinx.coroutines.test
 
-    // Jetpack Compose
+    /*Jetpack Compose*/
     implementation libs.androidx.ui
     implementation libs.androidx.material
     implementation libs.androidx.ui.tooling.preview
     implementation libs.androidx.lifecycle.viewmodel.compose
     implementation libs.androidx.activity.compose
 
-    // Add the compose compiler plugin explicitly if needed
+    /*Add the compose compiler plugin explicitly if needed*/
     implementation libs.androidx.compiler
 
-    // Hilt Dependency Injection
+    /*Hilt Dependency Injection*/
     implementation libs.hilt.android
-    kapt libs.hilt.compiler
+    kapt libs.hilt.android.compiler
     implementation libs.androidx.hilt.navigation.compose
-    androidTestImplementation libs.hilt.android.testing
-    kaptAndroidTest libs.hilt.compiler.v244
 
-    // Kotlin Coroutines
+    /*Kotlin Coroutines*/
     implementation libs.kotlinx.coroutines.core
     implementation libs.kotlinx.coroutines.android
 }
