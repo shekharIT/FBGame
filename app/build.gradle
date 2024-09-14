@@ -112,4 +112,22 @@ dependencies {
     /*Kotlin Coroutines*/
     implementation libs.kotlinx.coroutines.core
     implementation libs.kotlinx.coroutines.android
+
+    /*Mockito core library*/
+    testImplementation libs.mockito.core
+
+    /*Mockito Android support library*/
+    androidTestImplementation libs.mockito.android
+
+    /*Optional: MockK library (Kotlin-friendly mocking library)*/
+    testImplementation libs.mockk.v1120
+    androidTestImplementation libs.mockk.android
+
+    /*Mockito-Kotlin library*/
+    testImplementation libs.mockito.kotlin
+    androidTestImplementation libs.mockito.kotlin
+
+    /*androidx.arch.core.executor.testing.InstantTaskExecutorRule*/
+    testImplementation libs.androidx.core.testing
+    androidTestImplementation libs.androidx.core.testing
 }

@@ -2,6 +2,7 @@
 agp = "8.6.0"
 compiler = "1.5.15"
 core = "1.6.1"
+coreTesting = "2.1.0"
 hiltAndroidTesting = "2.48"
 hiltCompiler = "2.48"
 hiltNavigationCompose = "1.2.0"
@@ -17,7 +18,10 @@ activity = "1.9.2"
 constraintlayout = "2.1.4"
 hiltAndroid = "2.48"
 materialVersion = "1.7.0"
+mockitoCore = "3.12.4"
+mockitoKotlin = "3.2.0"
 mockk = "1.13.5"
+mockkVersion = "1.12.0"
 orchestrator = "1.5.0"
 runner = "1.1.0"
 turbine = "0.12.1"
@@ -31,6 +35,7 @@ androidx-activity-compose = { module = "androidx.activity:activity-compose", ver
 androidx-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "compiler" }
 androidx-core = { module = "androidx.test:core", version.ref = "core" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
 androidx-material = { module = "androidx.compose.material:material", version.ref = "materialVersion" }
@@ -57,7 +62,12 @@ hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltA
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroid" }
 androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
 androidx-ui-test-junit4-android = { group = "androidx.compose.ui", name = "ui-test-junit4-android", version.ref = "uiTestJunit4Android" }
+mockito-android = { module = "org.mockito:mockito-android", version.ref = "mockitoCore" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCore" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlin" }
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+mockk-android = { module = "io.mockk:mockk-android", version.ref = "mockkVersion" }
+mockk-v1120 = { module = "io.mockk:mockk", version.ref = "mockkVersion" }
 turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
 
 [plugins]
